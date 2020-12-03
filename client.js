@@ -13,27 +13,6 @@ const connect = function() {
   conn.on('connect', () => {
     conn.write('Name: MAR')
     console.log('connected')
-    
-    // for (let x = 0; x < 10; x++) {
-    //   if (x % 2 === 0) {
-    //     // setTimeout(() => {
-    //       conn.write('Move: up')
-    //     // }, 300)
-    //   } else {
-    //     // setTimeout(() => {
-    //       conn.write('Move: left')
-    //     // }, 400)
-    //   }
-    // }
-    setInterval(() => {
-      conn.write('Move: up')
-
-    }, 500)
-    // setInterval(() => {
-    //   conn.write('Move: right')
-    // }, )
-
-
   })
   conn.on('data', (data) => {
     console.log('Message from server: ', data)
